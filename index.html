@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Js Type writer Effect</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+     <p id="p"></p>
+
+
+
+     <!-- <adv> -->
+     <div class="adv">
+        <a href="https://www.youtube.com/channel/UCbxtRXeVSlSUhgDy9PyzDrw">
+             <img src="img/yt.png">
+        </a> 
+     </div>
+     <!-- </adv> -->
+     
+      
+     <script>
+     	var speed = 70;
+     	var i = 0;
+     	var p = document.getElementById('p');
+     	var txt = `Don't forget to subscribe the channel :)                `;
+
+        function tWE(){
+        	if (i < txt.length) {
+        		p.innerHTML += txt.charAt(i);
+        		i++;
+        		setTimeout(tWE, speed);
+        	}else{
+        		i = 0;
+        		p.innerHTML = txt.charAt(i);
+        		i++;
+        		setTimeout(tWE, speed);
+        	}
+        }
+        tWE();
+     </script>
+
+</body>
+</html>
